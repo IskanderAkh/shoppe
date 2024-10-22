@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import BurgerIcon from './BurgerIcon';
 import { useCart } from '../../Context/CartContext';
 
-const Burger = ({authUser}) => {
+const Burger = ({ authUser }) => {
   const [opened, setOpened] = useState(false);
   const { cart } = useCart();
 
@@ -82,7 +82,7 @@ const Burger = ({authUser}) => {
           </label>
           <ul className='burger-menu mt-10 gap-6 flex flex-col'>
             <li><Link to='/' className='burger-menu-li' onClick={closeMenu}>Home</Link></li>
-            <li  onClick={closeMenu}><Link to='/shop' className='burger-menu-li'>Shop</Link></li>
+            <li onClick={closeMenu}><Link to='/shop' className='burger-menu-li'>Shop</Link></li>
             <li><Link to='/about' className='burger-menu-li' onClick={closeMenu}>About</Link></li>
             <li><Link to='/blog' className='burger-menu-li' onClick={closeMenu}>Blog</Link></li>
             <li><Link to='/help' className='burger-menu-li' onClick={closeMenu}>Help</Link></li>
@@ -91,7 +91,7 @@ const Burger = ({authUser}) => {
           </ul>
           <div className='burger-line'></div>
           <ul className='flex flex-col gap-4 mt-6'>
-            <li><Link to='/account' className='burger-menu-li flex gap-2 items-center' onClick={closeMenu}><img src="/profile.svg" alt="Profile" />My account</Link></li>
+            <li><Link to='/profile' className='burger-menu-li flex gap-2 items-center' onClick={closeMenu}><img src="/profile.svg" alt="Profile" />My account</Link></li>
             <li><button className='burger-menu-li flex gap-2 items-center' onClick={closeMenu}><img src="/logout.svg" alt="Logout" />Logout</button></li>
           </ul>
         </div>
